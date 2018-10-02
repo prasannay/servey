@@ -6,6 +6,7 @@ survey
   <tr>
     <th>name</th>
     <th>description</th>
+    <th>Survey link</th>
   </tr>
   </thead>
 
@@ -14,6 +15,7 @@ survey
       <tr>
         <td><%= s.name %></td>
         <td><%= s.description%></td>
+        <td><%=link_to 'Survey link', s%></td>
       </tr>
   <% end %>
   </tbody>
