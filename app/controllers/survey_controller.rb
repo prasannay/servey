@@ -3,11 +3,20 @@ class SurveyController < ApplicationController
 
   def index
     @survey = Survey.includes(questions: :answers).all
-
+    respond_to do |format|
+      format.js
+      format.html
+      format.json
+    end
   end
 
   def show
     @survey = Survey.includes(questions: :answers).find(params[:id])
+     respond_to do |format|
+      format.js
+      format.html
+      format.json
+    end
   end
 
   def survey_submit
